@@ -26,9 +26,6 @@ nltk.download("stopwords")
 
 app = FastAPI()
 
-if __name__ == '__main__':
-    uvicorn.run(app, port=8080, host='127.0.0.1')
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
